@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:nested_navigation_demo_flutter/bottom_navigation.dart';
-import 'package:nested_navigation_demo_flutter/tab_navigator.dart';
+import 'package:geuniflutterapp/tab_navigator.dart';
+import 'package:geuniflutterapp/bottom_navigation.dart';
 
 class App extends StatefulWidget {
   @override
@@ -14,6 +14,18 @@ class AppState extends State<App> {
     TabItem.green: GlobalKey<NavigatorState>(),
     TabItem.blue: GlobalKey<NavigatorState>(),
   };
+
+  @override
+  void initState() {
+    super.initState();
+    print("initState");
+  }
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    print("didChangeDependencies");
+  }
 
   void _selectTab(TabItem tabItem) {
     if (tabItem == _currentTab) {
@@ -29,7 +41,7 @@ class AppState extends State<App> {
     return WillPopScope(
       onWillPop: () async {
         final isFirstRouteInCurrentTab =
-            !await _navigatorKeys[_currentTab].currentState.maybePop();
+        !await _navigatorKeys[_currentTab].currentState.maybePop();
         if (isFirstRouteInCurrentTab) {
           // if not on the 'main' tab
           if (_currentTab != TabItem.red) {

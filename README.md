@@ -1,30 +1,16 @@
-# Multiple Navigators with BottomNavigationBar
+# geuniflutterapp
 
-This is the source code for my article:
+A new Flutter application.
 
-- [Flutter Case Study: Multiple Navigators with BottomNavigationBar](https://medium.com/coding-with-flutter/flutter-case-study-multiple-navigators-with-bottomnavigationbar-90eb6caa6dbf)
+## Getting Started
 
-## Preview
+This project is a starting point for a Flutter application.
 
-![](screenshots/multiple-navigators-BottomNavigationBar-animation.gif)
+A few resources to get you started if this is your first Flutter project:
 
-In this example each tab has its own navigation stack. This is so that we don’t lose the navigation history when switching tabs.
+- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 
-This is a very common use case for a lot of apps.
-
-**How is it built?**
-
-- Create an app with a `Scaffold` and a `BottomNavigationBar`.
-- In the `Scaffold` body, create a `Stack` with one child for each tab.
-- Each child is an `Offstage` widget with a child `Navigator`.
-- Don't forget to handle Android back navigation with `WillPopScope`.
-
-Read the full story on my article:
-
-- [Flutter Case Study: Multiple Navigators with BottomNavigationBar](https://medium.com/coding-with-flutter/flutter-case-study-multiple-navigators-with-bottomnavigationbar-90eb6caa6dbf)
-
-### Credits
-
-- [Brian Egan](https://github.com/brianegan): for suggesting to use `Stack` + `Offstage` & `Navigator` widgets.
-
-### [License: MIT](LICENSE.md)
+For help getting started with Flutter, view our
+[online documentation](https://flutter.dev/docs), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.
