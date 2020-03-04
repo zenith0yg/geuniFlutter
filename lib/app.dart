@@ -29,7 +29,6 @@ class AppState extends State<App> {
 
   void _selectTab(TabItem tabItem) {
     if (tabItem == _currentTab) {
-      // pop to first route
       _navigatorKeys[tabItem].currentState.popUntil((route) => route.isFirst);
     } else {
       setState(() => _currentTab = tabItem);
